@@ -18,29 +18,34 @@ public class Project {
     private Long id;
 
     @Column(nullable = false)
-    private String name;
+    private String projectName;
 
     @Column(nullable = false)
-    private int status;
+    private int projectStatus;
 
     @Column(nullable = false)
-    private String idea;
+    private String projectIdea;
 
     @Column
-    private String repository_address;
+    private String projectRepository;
 
     @Column
-    private String description;
+    private String projectContent;
 
     @OneToMany(mappedBy = "project")
     private List<ProjectMember> memberList = new ArrayList<ProjectMember>();
 
     @Builder
-    public Project(String name, int status, String idea, String repository_address, String description) {
-        this.name = name;
-        this.status = status;
-        this.idea = idea;
-        this.repository_address = repository_address;
-        this.description = description;
+    public Project(String projectName, int projectStatus, String projectIdea, String projectRepository, String projectContent) {
+        this.projectName = projectName;
+        this.projectStatus = projectStatus;
+        this.projectIdea = projectIdea;
+        this.projectRepository = projectRepository;
+        this.projectContent = projectContent;
+    }
+
+    public Project addMember(ProjectMember projectMember) {
+        this.memberList.add(projectMember);
+        return this;
     }
 }

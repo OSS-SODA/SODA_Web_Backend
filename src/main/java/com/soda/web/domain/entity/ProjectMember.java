@@ -21,12 +21,12 @@ public class ProjectMember {
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "clubmember_id")
+    private ClubMember clubMember;
 
     @Builder
-    public ProjectMember(Project project, User user) {
+    public ProjectMember(Project project, ClubMember clubMember) {
         this.project = project;
-        this.user = user;
+        this.clubMember = clubMember;
     }
 }
