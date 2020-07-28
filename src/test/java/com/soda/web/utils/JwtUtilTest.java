@@ -24,4 +24,16 @@ class JwtUtilTest {
 
         assertThat(token).isEqualTo(".");
     }
+
+    @Test
+    void getClaims(){
+        String token = "eyJhbGciOiJIUzI1NiJ9."
+                + "eyJ1c2VySWQiOiJ0ZXN0IiwicGFzc3dvcmQiOiIxMjM0NTYifQ."
+                + "ljtQPkX37-3p8Pks50LQDXDXviDp5-GTz9snHeNECaM";
+        Claims claims = jwtUtil.getClaims(token);
+
+        assertThat(claims.get("userId")).isEqualTo("test");
+        assertThat(claims.get("password")).isEqualTo("123456");
+    }
+
 }
