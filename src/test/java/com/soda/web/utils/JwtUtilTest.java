@@ -22,7 +22,7 @@ class JwtUtilTest {
 
         String token = jwtUtil.createToken(userId, password);
 
-        assertThat(token).isEqualTo(".");
+        assertThat(token).contains(".");
     }
 
     @Test
