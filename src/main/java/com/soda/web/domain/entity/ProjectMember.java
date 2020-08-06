@@ -29,6 +29,4 @@ public class ProjectMember {
         this.project = project;
         this.clubMember = clubMember;
     }
-
-
 }

@@ -45,5 +45,4 @@ public class ClubMember {
         return this;
     }
 
-
 }
