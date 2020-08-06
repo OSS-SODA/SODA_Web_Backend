@@ -37,22 +37,13 @@ public class Project {
 
     @Builder
     public Project(String projectName, int projectStatus, String projectIdea, String projectRepository, String projectContent) {
-
         this.projectName = projectName;
         this.projectStatus = projectStatus;
         this.projectIdea = projectIdea;
         this.projectRepository = projectRepository;
         this.projectContent = projectContent;
     }
-//    @Builder
-//    public Project(Long id,String projectName, int projectStatus, String projectIdea, String projectRepository, String projectContent) {
-//        this.id=id;
-//        this.projectName = projectName;
-//        this.projectStatus = projectStatus;
-//        this.projectIdea = projectIdea;
-//        this.projectRepository = projectRepository;
-//        this.projectContent = projectContent;
-//    }
+
 
     public Project addMember(ProjectMember projectMember) {
         this.memberList.add(projectMember);
@@ -75,5 +66,6 @@ public class Project {
         this.projectRepository=projectRepository;
         this.projectContent=projectContent;
     }
+
 
 }
