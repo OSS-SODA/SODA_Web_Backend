@@ -1,19 +1,15 @@
 package com.soda.web.service;
 
-import com.soda.web.domain.entity.ClubMember;
-import com.soda.web.domain.entity.Project;
-import com.soda.web.repository.IProjectMemberRepository;
-import com.soda.web.repository.IProjectRepository;
-import org.springframework.transaction.annotation.Transactional;
+import com.soda.web.repository.ProjectMemberRepository;
+import com.soda.web.repository.ProjectRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
+@Service
+@RequiredArgsConstructor
 public class ProjectManagementService {
-   private final IProjectRepository projectRepository;
-   private final IProjectMemberRepository projectMemberRepository;
+   private final ProjectRepository projectRepository;
+   private final ProjectMemberRepository projectMemberRepository;
 
-
-    public ProjectManagementService(IProjectRepository projectRepository, IProjectMemberRepository projectMemberRepository) {
-        this.projectRepository = projectRepository;
-        this.projectMemberRepository = projectMemberRepository;
-    }
 
 }
