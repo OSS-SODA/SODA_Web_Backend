@@ -50,15 +50,7 @@ public class Project {
         return this;
     }
 
-    /**
-     *
-     * @param projectName
-     * @param projectStatus
-     * @param projectIdea
-     * @param projectRepository
-     * @param projectContent
-     * 프로젝트 수정
-     */
+
     public void updateProject(String projectName,int projectStatus, String projectIdea, String projectRepository,String projectContent){
         this.projectName=projectName;
         this.projectStatus=projectStatus;
