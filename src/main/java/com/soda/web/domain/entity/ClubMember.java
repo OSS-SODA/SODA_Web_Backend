@@ -8,6 +8,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Getter
 @NoArgsConstructor
 @Entity
@@ -27,13 +28,14 @@ public class ClubMember {
     private String memberPassword;
 
     @Column(nullable=false)
-    private int memberPermission;
+    @Enumerated(value = EnumType.STRING)
+    private ClubMemberRole memberPermission;
 
-    @OneToMany(mappedBy = "clubmember")
+    @OneToMany(mappedBy = "clubMember")
     private List<ProjectMember> projectList = new ArrayList<ProjectMember>();
 
     @Builder
-    public ClubMember(String memberName, String memberId, String memberPassword, int memberPermission) {
+    public ClubMember(String memberName, String memberId, String memberPassword, ClubMemberRole memberPermission) {
         this.memberName = memberName;
         this.memberId = memberId;
         this.memberPassword = memberPassword;
