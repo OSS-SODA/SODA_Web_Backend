@@ -44,8 +44,20 @@ public class Project {
         this.projectContent = projectContent;
     }
 
+
     public Project addMember(ProjectMember projectMember) {
         this.memberList.add(projectMember);
         return this;
     }
+
+
+    public void updateProject(String projectName,int projectStatus, String projectIdea, String projectRepository,String projectContent){
+        this.projectName=projectName;
+        this.projectStatus=projectStatus;
+        this.projectIdea=projectIdea;
+        this.projectRepository=projectRepository;
+        this.projectContent=projectContent;
+    }
+
+
 }

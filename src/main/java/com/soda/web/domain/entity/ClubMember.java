@@ -46,4 +46,5 @@ public class ClubMember {
         this.projectList.add(projectMember);
         return this;
     }
+
 }
